@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>{% block title %}{% endblock %}</title>
+  {% block css %}{% endblock %}
   </head>
   <body>
 
@@ -20,26 +21,31 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto"><!-- .mr-auto属性，靠左排列 -->
                   <li class="nav-item active">
                     <a class="nav-link" href="../index/">主页<span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="post.html">博文</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about.html">关于</a>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
-                </form>
-                  <li class="nav-item">
-                    <a class="nav-link" href="register.html">注册</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">登陆</a>
-                  </li>
-                  </ul>
+                  <ul class="nav navbar-nav ml-auto"><!-- .ml-auto属性，靠右排列 -->
+                      <li class="nav-item">
+                        <a class="nav-link" href="register.html">注册</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="login.html">登陆</a>
+                      </li>
+                </ul>
+{#                  <ul class="nav navbar-nav navbar-right">#}
+{#                      <form class="form-inline my-2 my-lg-0">#}
+{#                          <input class="form-control mr-sm-2" type="text" placeholder="Search">#}
+{#                          <button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>#}
+{#                      </form>#}
+{#                  </ul>#}
               </div>
             </div>
         </nav>
