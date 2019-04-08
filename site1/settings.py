@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # 用户登录与注册系统
     'login.apps.LoginConfig',
+    # 登录验证码包 django-simple-captcha
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# 更改验证码方式为简单算术题方式
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
