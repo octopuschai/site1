@@ -131,3 +131,13 @@ STATICFILES_DIRS = [
 
 # 更改验证码方式为简单算术题方式
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+
+# 邮件发送配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'xxx'
+EMAIL_HOST_PASSWORD = 'xxx'
+
+# 注册有效期
+CONFIRM_DAYS = 7
